@@ -22,7 +22,7 @@ https://nodejs.org/es/download
 ## Documentation
 ### Technical choices
 #### Node.js.
-I decided going with Node.js cause I use it as well in the Backend and wanted to be consistent, also I´m familiar to it.
+I decided to use Node.js because I already use it in the Backend and wanted to be consistent, also I´m familiar to it.
 #### Next.js and React. 
 I used React and Next.js because they offer a powerful, efficient, and scalable development stack. Next.js provides server-side rendering (SSR) and static site generation (SSG), improving performance and SEO. Additionally, it integrates seamlessly with Vercel for easy deployment.
 #### Typescript. 
