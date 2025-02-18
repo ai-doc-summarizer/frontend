@@ -15,10 +15,12 @@ https://nodejs.org/es/download
     ```bash
     npm install
     ```
-2. Run server:
+3. Run server:
     ```bash
     npm run dev
     ```
+4. Go to http://localhost:3000.
+
 ## Documentation
 ### Technical choices
 #### Node.js.
