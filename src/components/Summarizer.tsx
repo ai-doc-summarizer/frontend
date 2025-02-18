@@ -19,9 +19,15 @@ export default function Summarizer() {
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files.length > 0) {
-      setFile(e.target.files[0]);
-      setText("");
-      setErrorMessage(null);
+      const selectedFile = e.target.files[0];
+      if (selectedFile.type !== "application/pdf") {
+        setErrorMessage("Only PDF files are allowed.");
+        setFile(null);
+      } else {
+        setFile(e.target.files[0]);
+        setText("");
+        setErrorMessage(null);
+      }
     }
   };
 
@@ -100,7 +106,7 @@ export default function Summarizer() {
       </div>
       <button
         onClick={generateSummary}
-        disabled={(!text && !file) || loading}
+        disabled={(!text && !file) || loading || !!errorMessage}
         className="bg-blue-500 text-white px-4 py-2 rounded-lg mt-3 disabled:opacity-50"
       >
         {loading ? "Generando..." : "Generate Summary"}
